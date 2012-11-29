@@ -110,18 +110,6 @@ namespace OUC
 
         }
 
-        /*public static string MasterDisplayer(string _url, string _heading, int _qty, string _displayMethodName)
-        {
-            string output = "";
-
-            MethodInfo mi = WnlDisplayMethods.getWnlDisplayMethodByName(_displayMethodName);
-
-            output += mi.Invoke(new object { }, new object[] { _url, _heading, _qty });
-
-            return output;
-
-        }*/
-
         public static string MasterDisplayer(string _url, string _heading, string _heading_link, int _qty, string _displayMethodName)
         {
             string output = "";
