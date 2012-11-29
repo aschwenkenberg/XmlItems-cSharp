@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:ouc="http://omniupdate.com/XSL/Variables">
+<channel>
+<title>ETSU News 2012</title>
+<link>http://etsuw2dev.etsu.edu</link>
+<description>The news feed for ETSU.</description>
+<language>en-us</language>
+<lastBuildDate>Mon, 26 Nov 2012 14:17:19 -0500</lastBuildDate>
+<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+<generator>OmniUpdate (OU Publish)</generator>
+
+<item>
+<title>Browser Tab Title</title>
+<link>http://www.etsu.edu/zz-new-directory/zztest/image_1.aspx</link>
+<description>page description</description>
+<author>page author</author>
+<pubDate>Mon, 26 Nov 2012 14:17:19 -0500</pubDate>
+<media:content url="http://www.etsu.edu/images/08AOH.jpg">
+<media:title>Image Title</media:title>
+<media:description>Image Description</media:description>
+<media:thumbnail url="http://www.etsu.edu/images/admin_title.gif"></media:thumbnail>
+<media:keywords>image keywords</media:keywords>
+</media:content>
+<ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>true</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>false</ouc:item-is-video>
+</item>
+<item>
+<title>Page Title</title>
+<link>http://www.etsu.edu/zz-new-directory/zztest/video_2.aspx</link>
+<description>page description</description>
+<author>page author</author>
+<pubDate>Mon, 26 Nov 2012 14:15:12 -0500</pubDate>
+<media:content url="http://www.youtube.com/watch?v=oAcY1Ou6tiw">
+<media:title>Video Title</media:title>
+<media:description>Need a pick-me-up? Come by the OmniUpdate headquarters for a coffee boost! Watch as Lance Merker, OmniUpdate President and CEO, goes undercover as the Head Barista and shows you how to brew the perfect espresso using fresh beans from all over the world roasted daily on-site in the OU Cafe!</media:description>
+<media:thumbnail url="http://www.etsu.edu/images/1campus_tour.gif"></media:thumbnail>
+<media:keywords>coffee beans brewing espresso </media:keywords>
+</media:content>
+<ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>false</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>true</ouc:item-is-video>
+</item>
+<item>
+<title>Page title</title>
+<link>http://www.etsu.edu/zz-new-directory/zztest/video_3.aspx</link>
+<description>page description</description>
+<author>page author</author>
+<pubDate>Mon, 26 Nov 2012 14:15:11 -0500</pubDate>
+<media:content url="http://www.youtube.com/watch?v=Viuiljw9i7M">
+<media:title>Video Title</media:title>
+<media:description>Video Description</media:description>
+<media:thumbnail url="http://www.etsu.edu/images/08H.jpg"></media:thumbnail>
+<media:keywords>User conference</media:keywords>
+</media:content>
+<ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>true</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>true</ouc:item-is-video>
+</item>
+<item>
+<title>page title</title>
+<link>http://www.etsu.edu/zz-new-directory/zztest/video_1.aspx</link>
+<description>page descriptoin</description>
+<author>page author</author>
+<pubDate>Mon, 26 Nov 2012 13:58:47 -0500</pubDate>
+<media:content url="http://www.youtube.com/watch?v=oAcY1Ou6tiw">
+<media:title>Video Title</media:title>
+<media:description>Video Description</media:description>
+<media:thumbnail url="http://www.etsu.edu/images/08AOH.jpg"></media:thumbnail>
+<media:keywords>Video Keywords</media:keywords>
+</media:content>
+<ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>false</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>true</ouc:item-is-video>
+</item>
+<item>
+<title>Video</title>
+<link>http://www.etsu.edu/zz-new-directory/zztest/video.aspx</link>
+<description>test</description>
+<author>ETSU</author>
+<pubDate>Mon, 26 Nov 2012 13:39:14 -0500</pubDate>
+<media:content url="http://www.youtube.com">
+<media:title>Video Title</media:title>
+<media:description>Video Description</media:description>
+<media:thumbnail url="http://www.etsu.edu/images/08AOH.jpg"></media:thumbnail>
+<media:keywords> </media:keywords>
+</media:content>
+<ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>false</ouc:home-featured><ouc:highlighted>true</ouc:highlighted><ouc:item-is-video>true</ouc:item-is-video>
+</item>
+<item>
+<title>Image</title>
+<link>http://www.etsu.edu/zz-new-directory/zztest/image.aspx</link>
+<description>Image</description>
+<author>ETSU</author>
+<pubDate>Mon, 26 Nov 2012 13:39:12 -0500</pubDate>
+<media:content url="http://www.etsu.edu/images/08AOH.jpg">
+<media:title>Image Title</media:title>
+<media:description>Image Description</media:description>
+<media:thumbnail url="http://www.etsu.edu/images/08AS.jpg"></media:thumbnail>
+<media:keywords> </media:keywords>
+</media:content>
+<ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>true</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>false</ouc:item-is-video>
+</item>
+
+
+</channel>
+</rss>

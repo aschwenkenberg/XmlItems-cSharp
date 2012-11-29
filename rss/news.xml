@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:ou="http://omniupdate.com/XSL/Variables">
+<channel>
+<title>News</title>
+<link>http://www.gallenauniversity.com</link>
+<description>Recent news at Gallena University.</description>
+<language>en-us</language>
+<lastBuildDate>Wed, 21 Nov 2012 09:56:57 -0800</lastBuildDate>
+<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+<generator>OmniUpdate (OU Publish)</generator>
+
+<item>
+<title>Gallena University Celebrates 100 Years!</title>
+<link>http://www.gallenauniversity.com/news/gallena_celebrates_100.html</link>
+<description>Gallena University celebrates 100 years of academic excellence. Gallena University is a private University which was founded in 1912. The 310-acre campus is located in Gallena, a diverse community in a culturally rich region of Northern California. The University enrolls 3,634 students in twenty-five undergraduate and seven graduate programs with approximately 350 full-time faculty and staff. Gallena University celebrates 100 years of academic excellence. </description>
+<author> </author>
+<pubDate>Wed, 14 Nov 2012 12:02:57 -0800</pubDate>
+<media:content url="http://www.gallenauniversity.com/_resources/images/news/student_activity.jpg">
+<media:title>Gallena University Celebrates 100 Years!</media:title>
+<media:description>Gallena University celebrates 100 years of academic excellence. Gallena University is a private University which was founded in 1912. The 310-acre campus is located in Gallena, a diverse community in a culturally rich region of Northern California. The University enrolls 3,634 students in twenty-five undergraduate and seven graduate programs with approximately 350 full-time faculty and staff. Gallena University celebrates 100 years of academic excellence. </media:description>
+<media:thumbnail url="http://www.gallenauniversity.com/_resources/images/news/thumbs/student_activity.jpg"></media:thumbnail>
+<media:keywords>Gallena University celebrates 100 years of academic excellence. Gallena University is a private University which was founded in 1912. The 310-acre campus is located in Gallena, a diverse community in a culturally rich region of Northern California. The University enrolls 3,634 students in twenty-five undergraduate and seven graduate programs with approximately 350 full-time faculty and staff. Gallena University celebrates 100 years of academic excellence. </media:keywords>
+</media:content>
+</item>
+<item>
+<title>Study Abroad Informational Meeting</title>
+<link>http://www.gallenauniversity.com/news/study_abroad.html</link>
+<description>All Gallena Friends &amp; Family are welcome to join us on campus for our annual semester abroad discussion. This is a great new way to learn about expanding your international education through hands on experience in a foreign country. </description>
+<author>Richard Smith</author>
+<pubDate>Thu, 09 Aug 2012 06:25:52 -0700</pubDate>
+<media:content url="http://www.gallenauniversity.com/_resources/images/news/adult_education.jpg">
+<media:title>Study Abroad Informational Meeting</media:title>
+<media:description>All Gallena Friends &amp; Family are welcome to join us on campus for our annual semester abroad discussion. This is a great new way to learn about expanding your international education through hands on experience in a foreign country. </media:description>
+<media:thumbnail url="http://www.gallenauniversity.com/_resources/images/news/thumbs/adult_education.jpg"></media:thumbnail>
+<media:keywords>All Gallena Friends &amp; Family are welcome to join us on campus for our annual semester abroad discussion. This is a great new way to learn about expanding your international education through hands on experience in a foreign country. </media:keywords>
+</media:content>
+</item>
+<item>
+<title>Gallena Football Wins First Scrimmage</title>
+<link>http://www.gallenauniversity.com/news/gallena_football_scrimmage.html</link>
+<description>Gallena University's football wins its first scrimmage of the year.</description>
+<author>John Q. Sports</author>
+<pubDate>Wed, 08 Aug 2012 11:45:17 -0700</pubDate>
+<media:content url="http://www.gallenauniversity.com/_resources/images/news/american_football.jpg">
+<media:title>Gallena Football Wins First Scrimmage</media:title>
+<media:description>Gallena University's football wins its first scrimmage of the year.</media:description>
+<media:thumbnail url="http://www.gallenauniversity.com/_resources/images/news/thumbs/american_football.jpg"></media:thumbnail>
+<media:keywords>Gallena University's football wins its first scrimmage of the year.</media:keywords>
+</media:content>
+</item>
+
+
+</channel>
+</rss>

@@ -9,22 +9,27 @@ using System.Xml.XPath;
 namespace OUC
 {
     /// <summary>
-    /// Summary description for YahooRssItem
+    /// Summary description for EtsuRssItem
     /// </summary>
     public class EtsuRssItem : XmlItem
     {
         public XNamespace yahooMediaNS = "http://search.yahoo.com/mrss/";
+        public XNamespace OucNS = "http://omniupdate.com/XSL/Variables";
 
         public XElement media { get; set; }
-        public XElement ouc { get; set; }
+
         public bool hasMedia { get { return this.media != null ? true : false; } }
-        public bool hasOuc { get { return this.ouc != null ? true : false; } }
+        public bool hasLocation { get { return this.originalElement.Element(this.OucNS + "location") != null ? true : false; } } 
         public string murl { get; set;}
         public string mtitle { get;set;}
         public string mdesc { get; set; }
         public string mkey { get; set; }
         public string mthumb { get; set; }
         public string tagline { get; set; }
+        public string location { get; set; }
+        public string homefeatured { get; set; }
+        public string highlighted { get; set; }
+        public string itemisvideo { get; set; }
 
 
         public DateTime DateObject
@@ -85,12 +90,16 @@ namespace OUC
 
             }
 
-            this.ouc = item.Element("tagline");
-            if (this.hasOuc)
-            {
-                this.tagline = (this.childNodeValue("tagline") != null) ? this.childNodeValue("tagline") : "tagline";
-            }
-
+           
+            this.location = (item.Element(this.OucNS + "location") != null) ? item.Element(this.OucNS + "location").Value : "JOHNSON CITY, TN";
+           
+            
+                        
+            this.tagline = (item.Element(this.OucNS + "tagline") != null) ? item.Element(this.OucNS + "tagline").Value : "";            
+            this.homefeatured = (item.Element(this.OucNS + "home-featured").Value != null) ? item.Element(this.OucNS + "home-featured").Value : "home-featured";
+            this.highlighted = (item.Element(this.OucNS + "highlighted").Value != null) ? item.Element(this.OucNS + "highlighted").Value : "highlighted";
+            this.itemisvideo = (item.Element(this.OucNS + "item-is-video").Value != null) ? item.Element(this.OucNS + "item-is-video").Value : "item-is-video"; 
+                                            
             //
             // TODO: Add constructor logic here
             //
@@ -101,7 +110,7 @@ namespace OUC
         /// <returns></returns>
      
 
-        public string ToListSample0() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_datespan\">JOHNSON CITY, TN <em>({3}) </em></span><span class=\"rss_shortdescript\"> {4}<a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li>", this.murl, this.link, this.title, this.monthyear, this.description); }
+        public string ToListSample0() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_datespan\">{5} <em>({3}) </em></span><span class=\"rss_shortdescript\"> {4}<a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li>", this.murl, this.link, this.title, this.monthyear, this.description, this.location); }
 
         public string ToListSample1() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_shortdescript\"><em>({3}) </em> {4}<a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li>", this.murl, this.link, this.title, this.monthyear, this.description); }
 

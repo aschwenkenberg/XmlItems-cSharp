@@ -84,12 +84,19 @@ namespace OUC
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<div style=\"overflow:hidden;\">";
-            xml.items.ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample7(); });
+            xml.items.ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample7(); });
             o += "</div>";
             return o;
         }
-       
 
+        public static string rss_sample_7a(string _url, string _xpath, int _qty)
+        {
+            LocalItems xml = new LocalItems(_url, _xpath);
+            string o = "<div style=\"overflow:hidden;\">";
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample7(); });
+            o += "</div>";
+            return o;
+        }
        
         public static string eventsList(string _url,string _xpath)
         {
