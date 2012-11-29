@@ -1,4 +1,4 @@
-﻿<%@ WebHandler Language="C#" Class="wnl_handler" %>
+﻿<%@ WebHandler Language="C#" Class="Handler" %>
 
 using System;
 using System.Web;
@@ -13,10 +13,7 @@ using System.Web.Script.Serialization;
 using OUC;
 
 
-namespace OUC
-{
-
-    public class wnl_handler : IHttpHandler
+    public class Handler : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
@@ -52,12 +49,14 @@ namespace OUC
 
             }
 
-            
+
+
+            string items = OUC.WnlDisplayMethods.rss_sample_0(rssUri, "rss/channel/item");
+
            
-            //string html = WnlDisplayMethods.rss_sample_7("rss/news2012.xml", "/rss/channel/item");
-            //context.Response.Write(html);
-            string toJson = "";
-           context.Response.Write(callback + "(" + toJson + ")");
+            //JavaScriptSerializer serial = new JavaScriptSerializer();
+            //string toJson = serial.Serialize(items);
+            context.Response.Write(items);
 
         }
 
@@ -68,8 +67,13 @@ namespace OUC
                 return false;
             }
         }
-        
+
+
+
+
+
     }
 
-    
-}
+   
+
+       
