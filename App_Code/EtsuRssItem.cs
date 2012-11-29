@@ -108,17 +108,17 @@ namespace OUC
         /// <returns></returns>
      
 
-        public string ToListSample0() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_datespan\">{5} <em>({3}) </em></span><span class=\"rss_shortdescript\"> {4}<a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li>", this.mthumb, this.link, this.title, this.monthyear, this.description, this.location); }
+        public string ToListSample0() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_datespan\">{5} <em>({3}) </em></span><span class=\"rss_shortdescript\"> {4}  <a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li>", this.mthumb, this.link, this.title, this.monthyear, this.description, this.location); }
 
-        public string ToListSample1() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_shortdescript\"><em>({3}) </em> {4}<a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li>", this.mthumb, this.link, this.title, this.monthyear, this.description); }
+        public string ToListSample1() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_shortdescript\"><em>({3}) </em> {4}  <a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li>", this.mthumb, this.link, this.title, this.monthyear, this.description); }
 
-        public string ToListSample2() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a></span><span class=\"rss_shortdescript\"><em>({2})  -  </em> {2}  <a class=\"rss_readmore\" href=\"{0}\">Read more...</a></span></li> ", this.link, this.title, this.description);}
+        public string ToListSample2() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a></span><span class=\"rss_shortdescript\"><em>({2})  -  </em> {3}  <a class=\"rss_readmore\" href=\"{0}\">Read more...</a></span></li> ", this.link, this.title, this.monthyear, this.description); }
 
         public string ToListSample3() { return String.Format("<li class=\"rss_simplelistitem\"><span class=\"rss_spantitle\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a></span></li>", this.link, this.title);}
 
         public string ToListSample4() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a></span><span class=\"rss_imgspand2\"><img src=\"{2}\"/></span><span class=\"rss_datespan\">({3})</span><span class=\"rss_shortdescript\"> {4}  <a class=\"rss_readmore\" href=\"{0}\">Read more...</a></span></li>", this.link, this.title, this.murl, this.monthyear, this.description);}
 
-        public string ToListSample6() { return String.Format(" <li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img class=\"rss_image\" src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_datespan\">{3}</span></li>", this.mthumb, this.link, this.title, this.monthyear); }
+        public string ToListSample6() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img class=\"rss_image\" src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_datespan\">{3}</span></li>", this.mthumb, this.link, this.title, this.monthyear); }
 
         public string ToListSample7() { return String.Format("<p class=\"rss_hptitle\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a><br/><span class=\"newstagline\">{2}</span></p>", this.link, this.title, this.tagline); }
 

@@ -57,7 +57,7 @@ namespace OUC
         }
 
         public string ToListItemWithLink() { return String.Format("<li><a href=\"{0}\">{1}</a></li>",this.link,this.title); }
-        //public string rss_sample_0() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span>", this.murl, this.link); }
+        
     }
 
 }
