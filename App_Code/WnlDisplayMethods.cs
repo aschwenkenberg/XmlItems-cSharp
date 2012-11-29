@@ -16,80 +16,71 @@ namespace OUC
    
     public static class WnlDisplayMethods
     {
-        public static string newsList(string _url,string _xpath)
+        public static string newsList(string _url, string _xpath, int _qty)
         {
             XmlItems xml = new XmlItems(_url,_xpath);
             string o = "<ul>";
-            xml.items.ForEach(x => { YahooRssItem item = new YahooRssItem(x); o += item.ToListItemWithLink(); });
+            xml.items.Take(_qty).ToList().ForEach(x => { YahooRssItem item = new YahooRssItem(x); o += item.ToListItemWithLink(); });
             o += "</ul>";
             return o;
         }
 
 
-        public static string rss_sample_0(string _url, string _xpath)
+        public static string rss_sample_0(string _url, string _xpath, int _qty)
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<ul class=\"rss_hidelist\">";
-            xml.items.ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample0(); });
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample0(); });
             o += "</ul>";
             return o;
         }
 
-        public static string rss_sample_1(string _url, string _xpath)
+        public static string rss_sample_1(string _url, string _xpath, int _qty)
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<ul class=\"rss_simplelist\">";
-            xml.items.ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample1(); });
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample1(); });
             o += "</ul>";
             return o;
         }
 
-        public static string rss_sample_2(string _url, string _xpath)
+        public static string rss_sample_2(string _url, string _xpath, int _qty)
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<ul class=\"rss_simplelist\">";
-            xml.items.ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample2(); });
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample2(); });
             o += "</ul>";
             return o;
         }
 
-        public static string rss_sample_3(string _url, string _xpath)
+        public static string rss_sample_3(string _url, string _xpath, int _qty)
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<ul class=\"rss_simplelist\">";
-            xml.items.ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample3(); });
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample3(); });
             o += "</ul>";
             return o;
         }
 
-        public static string rss_sample_4(string _url, string _xpath)
+        public static string rss_sample_4(string _url, string _xpath, int _qty)
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<ul class=\"rss_hidelist\">";
-            xml.items.ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample4(); });
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample4(); });
             o += "</ul>";
             return o;
         }
 
-        public static string rss_sample_6(string _url, string _xpath)
+        public static string rss_sample_6(string _url, string _xpath, int _qty)
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<ul class=\"rss_hidelist\">";
-            xml.items.ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample6(); });
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample6(); });
             o += "</ul>";
             return o;
         }
 
-        public static string rss_sample_7(string _url, string _xpath)
-        {
-            LocalItems xml = new LocalItems(_url, _xpath);
-            string o = "<div style=\"overflow:hidden;\">";
-            xml.items.ToList().ForEach(x => { EtsuRssItem item = new EtsuRssItem(x); o += item.ToListSample7(); });
-            o += "</div>";
-            return o;
-        }
-
-        public static string rss_sample_7a(string _url, string _xpath, int _qty)
+        public static string rss_sample_7(string _url, string _xpath, int _qty)
         {
             LocalItems xml = new LocalItems(_url, _xpath);
             string o = "<div style=\"overflow:hidden;\">";
@@ -106,7 +97,20 @@ namespace OUC
             r += "</ul>";
             return r;
         }
-        public static string MasterDisplayer(string _url, string _heading, int _qty, string _displayMethodName)
+
+        public static string MasterDisplayer(string _url, string _xpath, int _qty, string _displayMethodName)
+        {
+            string output = "";
+
+            MethodInfo mi = WnlDisplayMethods.getWnlDisplayMethodByName(_displayMethodName);
+
+            output += mi.Invoke(new object { }, new object[] { _url, _xpath, _qty });
+
+            return output;
+
+        }
+
+        /*public static string MasterDisplayer(string _url, string _heading, int _qty, string _displayMethodName)
         {
             string output = "";
 
@@ -116,7 +120,7 @@ namespace OUC
 
             return output;
 
-        }
+        }*/
 
         public static string MasterDisplayer(string _url, string _heading, string _heading_link, int _qty, string _displayMethodName)
         {

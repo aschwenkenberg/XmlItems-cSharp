@@ -86,26 +86,20 @@ namespace OUC
             if (this.hasMedia)
             {
               this.murl = (this.media.Attribute("url") != null) ? this.media.Attribute("url").Value : "murl";
-
-
             }
-
            
-            this.location = (item.Element(this.OucNS + "location") != null) ? item.Element(this.OucNS + "location").Value : "JOHNSON CITY, TN";
-           
-            
-                        
+            this.location = (item.Element(this.OucNS + "location") != null) ? item.Element(this.OucNS + "location").Value : "JOHNSON CITY, TN";                       
             this.tagline = (item.Element(this.OucNS + "tagline") != null) ? item.Element(this.OucNS + "tagline").Value : "";            
-            this.homefeatured = (item.Element(this.OucNS + "home-featured").Value != null) ? item.Element(this.OucNS + "home-featured").Value : "home-featured";
-            this.highlighted = (item.Element(this.OucNS + "highlighted").Value != null) ? item.Element(this.OucNS + "highlighted").Value : "highlighted";
-            this.itemisvideo = (item.Element(this.OucNS + "item-is-video").Value != null) ? item.Element(this.OucNS + "item-is-video").Value : "item-is-video"; 
+            this.homefeatured = (item.Element(this.OucNS + "home-featured") != null) ? item.Element(this.OucNS + "home-featured").Value : "home-featured";
+            this.highlighted = (item.Element(this.OucNS + "highlighted") != null) ? item.Element(this.OucNS + "highlighted").Value : "highlighted";
+            this.itemisvideo = (item.Element(this.OucNS + "item-is-video") != null) ? item.Element(this.OucNS + "item-is-video").Value : "item-is-video"; 
                                             
             //
             // TODO: Add constructor logic here
             //
         }
         /// <summary>
-        ///  ToListItemWithLink returns this YahooRssItem as 
+        ///  ToListItemWithLink returns this EtsuRssItem as 
         ///  </summary>
         /// <returns></returns>
      

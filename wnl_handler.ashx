@@ -18,13 +18,14 @@ using OUC;
 
         public void ProcessRequest(HttpContext context)
         {
-            //context.Response.ContentType = "application/json";
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             int numberToDisplay = 0;
-            var doc = new XDocument();
             string rssUri = "rss/news2012.xml";
+            string rssXPath = "rss/channel/item";
+            string displayMethod = "";
             string callback = "?";
+            
             if (context.Request["quantity"] != null)
             {
                 numberToDisplay = int.Parse(context.Request["quantity"]);
@@ -44,18 +45,19 @@ using OUC;
             }
             else
             {
-
                 callback = "callback";
-
+            }
+            if (context.Request["display"] != null)
+            {
+                displayMethod = context.Request["display"];
+            }
+            else
+            {
+                displayMethod = "rss_sample_7";
             }
 
 
-
-            string items = OUC.WnlDisplayMethods.rss_sample_0(rssUri, "rss/channel/item");
-
-           
-            //JavaScriptSerializer serial = new JavaScriptSerializer();
-            //string toJson = serial.Serialize(items);
+            string items = OUC.WnlDisplayMethods.MasterDisplayer(rssUri, rssXPath, numberToDisplay, displayMethod);
             context.Response.Write(items);
 
         }
