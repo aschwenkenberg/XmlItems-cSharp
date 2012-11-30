@@ -104,8 +104,13 @@ namespace OUC
 
             MethodInfo mi = WnlDisplayMethods.getWnlDisplayMethodByName(_displayMethodName);
 
-            output += mi.Invoke(new object { }, new object[] { _url, _xpath, _qty });
-
+            if (mi != null)
+            {
+                output += mi.Invoke(new object { }, new object[] { _url, _xpath, _qty });
+            }
+            else {
+                output = "Error in the WNLDisplayMethod";
+            }
             return output;
 
         }
@@ -115,8 +120,13 @@ namespace OUC
             string output = "";
 
             MethodInfo mi = WnlDisplayMethods.getWnlDisplayMethodByName(_displayMethodName);
-
-            output += mi.Invoke(new object { }, new object[] { _url, _heading, _heading_link, _qty });
+            if (mi != null)
+            {
+                output += mi.Invoke(new object { }, new object[] { _url, _heading, _heading_link, _qty });
+            }
+            else {
+                output = "Error in the WNLDisplayMethod";
+            }
 
             return output;
 
@@ -127,8 +137,14 @@ namespace OUC
             string output = "";
 
             MethodInfo mi = WnlDisplayMethods.getWnlDisplayMethodByName(_displayMethodName);
-
-            output += mi.Invoke(new object { }, new object[] { _url, _xpath, _heading, _heading_link, _more_link, _qty });
+            if (mi != null)
+            {
+                output += mi.Invoke(new object { }, new object[] { _url, _xpath, _heading, _heading_link, _more_link, _qty });
+            }
+            else
+            {
+                output = "Error in the WNLDisplayMethod";
+            }
 
             return output;
 
@@ -137,10 +153,17 @@ namespace OUC
          public static string MasterDisplayer(string _url, string _xpath, string _heading, string _heading_link, int _qty, string _displayMethodName)
         {
             string output = "";
-
+             
             MethodInfo mi = WnlDisplayMethods.getWnlDisplayMethodByName(_displayMethodName);
 
-            output += mi.Invoke(new object { }, new object[] { _url, _xpath, _heading, _heading_link, _qty });
+            if (mi != null)
+            {
+                output += mi.Invoke(new object { }, new object[] { _url, _xpath, _heading, _heading_link, _qty });
+            }
+            else
+            {
+                output = "Error in the WNLDisplayMethod";
+            }
 
             return output;
 
@@ -149,10 +172,16 @@ namespace OUC
         public static string MasterDisplayer(string _heading, string _heading_link, string _displayMethodName, string _url_one, string _xpath_one, string _heading_one, string _heading_link_one, int _qty_one, string _displayMethodName_one, string _url_two, string _xpath_two, string _heading_two, string _heading_link_two, int _qty_two, string _displayMethodName_two)
         {
             string output = "";
-
+            
             MethodInfo mi = WnlDisplayMethods.getWnlDisplayMethodByName(_displayMethodName);
-
-            output += mi.Invoke(new object { }, new object[] { _heading, _heading_link, _url_one, _xpath_one, _heading_one, _heading_link_one, _qty_one, _displayMethodName_one, _url_two, _xpath_two, _heading_two, _heading_link_two, _qty_two, _displayMethodName_two });
+            if (mi != null)
+            {
+                output += mi.Invoke(new object { }, new object[] { _heading, _heading_link, _url_one, _xpath_one, _heading_one, _heading_link_one, _qty_one, _displayMethodName_one, _url_two, _xpath_two, _heading_two, _heading_link_two, _qty_two, _displayMethodName_two });
+            }
+            else
+            {
+                  output = "Error in the WNLDisplayMethod";
+            }
 
             return output;
 
