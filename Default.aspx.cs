@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using OUC;  
+using OUC;
+
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -21,5 +22,8 @@ public partial class _Default : System.Web.UI.Page
         cont.InnerHtml += WnlDisplayMethods.MasterDisplayer("rss/news2012.xml", "/rss/channel/item", 3, "rss_sample_7");
         //cont.InnerHtml += WnlDisplayMethods.eventsList("http://calendar.spsu.edu/webcache/v1.0/xmlDays/7/list-xml/no--filter.xml", "/bedework/events/event");
         
+        
+
+
     }
 }
