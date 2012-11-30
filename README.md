@@ -10,7 +10,7 @@ The project as a whole will contain some classes to represent an individual item
 
 the XmlItems object will parse the url and store items resulting from the xpath parameter as XElements
 
-the purpose of the XmlItem class is to rperesent each individual item and store values of child nodes in properties
+the purpose of the XmlItem class is to represent each individual item and store values of child nodes in properties
 
 YahooRssItem inherits from XmlItem and will store values of the child nodes of each item first checking for the nodes existance to prevent runtime errors
 
