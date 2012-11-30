@@ -12,15 +12,15 @@ using System.Xml.XPath;
 /// </summary>
 namespace OUC
 {
-    public class XmlItems
+    public class LocalItems
     {
         public List<string> errors = new List<string>();
         public List<XElement> items = new List<XElement>();
         public bool hasItems { get { return (items.Count > 0) ? true : false; } }
 
-        public XmlItems() { }
+        public LocalItems() { }
         
-        public XmlItems(string _url, string _xpath)
+        public LocalItems(string _url, string _xpath)
         {
             try
             {
