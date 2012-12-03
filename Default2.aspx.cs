@@ -44,6 +44,6 @@ public partial class Default2 : System.Web.UI.Page
 
 
        }
-         els.ForEach( xmlel => { EtsuRssItem ei = new EtsuRssItem(xmlel); cont.InnerHtml += ei.ToListItemWithLink(); });
+       els.ForEach(xmlel => { Response.Write("wrk"); });
     }
 }

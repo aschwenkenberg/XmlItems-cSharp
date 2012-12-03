@@ -22,7 +22,7 @@
         var ajaxUrl = "wnl_handler.ashx";
         $(document).ready(function () {
 
-            var quantity = 3;
+            var quantity = 20;
             var display = "rss_sample_2";
             var feed = "rss/news2012.xml";
             var xpath = "rss/channel/item";
