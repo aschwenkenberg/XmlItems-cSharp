@@ -22,7 +22,8 @@ using OUC;
             context.Response.ContentEncoding = Encoding.UTF8;
             
             int numberToDisplay = 10;
-            bool isNum = int.TryParse(context.Request["quantity"], out numberToDisplay);
+            int numToDisplay = 0;
+            bool isNum = int.TryParse(context.Request["quantity"], out numToDisplay);
             string rssUri = "rss/news2012.xml";
             string rssXPath = "rss/channel/item";
             string displayMethod = "rss_sample_7";

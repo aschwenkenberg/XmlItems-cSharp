@@ -29,6 +29,7 @@ public partial class Default2 : System.Web.UI.Page
            {
                if(reader.NodeType == XmlNodeType.Element)
                {
+
                    if(reader.Name == "item")
                    {
                        XElement el = XNode.ReadFrom(reader) as XElement;
@@ -44,6 +45,6 @@ public partial class Default2 : System.Web.UI.Page
 
 
        }
-         els.ForEach( xmlel => { EtsuRssItem ei = new EtsuRssItem(xmlel); cont.InnerHtml += ei.ToListItemWithLink(); });
+         //els.ForEach( xmlel => { EtsuRssItem ei = new EtsuRssItem(xmlel); cont.InnerHtml += ei.ToListItemWithLink(); });
     }
 }
