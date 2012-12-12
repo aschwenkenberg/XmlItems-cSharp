@@ -9,13 +9,18 @@
     <script type="text/javascript">
         // short hand for $(document).ready(function(){ ...
         $(function () {
+
+            var d = new Date();
+            var end = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear();
           
             // calling the plugin
             $('#news').etsuNews({
                feed: "rss/news2012.xml",
                quantity: "4",
                displayMethod: "rss_test_0",
-               categories: "all"
+               categories: "all",
+               start : "01/01/2012",
+               end : end
             });
            
         });

@@ -30,7 +30,7 @@ using OUC;
             string categories = "medical";
             string colleges = "all";
             string tags = "all";
-            string start = "10/01/2012";
+            string start = "01/01/2012";
             string end = "12/12/2012";
             
             string callback = "?";
@@ -62,6 +62,14 @@ using OUC;
             if (context.Request["tags"] != null)
             {
                 tags = context.Request["tags"].ToLower();
+            }
+            if (context.Request["start"] != null)
+            {
+                tags = context.Request["start"];
+            }
+            if (context.Request["end"] != null)
+            {
+                tags = context.Request["end"];
             }
             if (context.Request["callback"] != null)
             {

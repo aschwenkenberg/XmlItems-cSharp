@@ -29,18 +29,24 @@ namespace OUC
                 var doc = XDocument.Load(HttpContext.Current.Server.MapPath(_url));
                 //var doc = XDocument.Load(_url);
                 //this.items = doc.XPathSelectElements(_xpath).ToList();
+                DateTime start, end;
+                if (_start == "") { start = Convert.ToDateTime("1/1/12"); } else { start = Convert.ToDateTime(_start); };
+                if (_end == "") { end = DateTime.Now; } else { end = Convert.ToDateTime(_end); } 
 
-                DateTime start = Convert.ToDateTime(_start);
-                DateTime end = Convert.ToDateTime(_end);
+                string category = "medical"; //_category.ToLower().Trim();
+                string all = "all";
 
-                var category = _category.ToLower().Trim();
-                var all = "all"; 
-                if(!(string.Equals(category, all))){
-                    IEnumerable<XElement> nodes =
+                if (!(string.Equals(category, all)))
+                {
+                   /* IEnumerable<XElement> nodes =
                                      from node in doc.Descendants("item")
                                      where node.Elements(OucNS + "category")
-                                      .Any(x => x.Value.Contains(category)) //&& (DateTime)node.Elements(OucNS + "dubDate").Any(x => DateTime.Parse(x.Value) > DateTime.Parse(_start))
-                                     select node;
+                                      .Any(x => x.Value.Contains(category)) //&& where(y => ((DateTime) y.Element("pubDate")).Date  > (start))
+                                    select node; */
+
+                    IEnumerable<XElement> nodes = from node in doc.Descendants("item")
+                               .Where(x => ((DateTime)x.Element("pubDate") >= start)).Where(x => ((DateTime)x.Element("pubDate") <= end)).Where(y => y.Element(OucNS + "category").Value.ToLower().Contains(category))
+                                       select node;
 
                     if (nodes != null )
                     {
@@ -52,7 +58,7 @@ namespace OUC
                     }
                }else{
                    var docu = XDocument.Load(HttpContext.Current.Server.MapPath(_url));
-                        this.items = docu.XPathSelectElements(_xpath).ToList();
+                       this.items = docu.XPathSelectElements(_xpath).ToList();
                }
 
             }
@@ -62,5 +68,7 @@ namespace OUC
             }
 
         }
+
+      
     }
 }
