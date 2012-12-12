@@ -6,13 +6,21 @@
     <title>ETSU JQUERY PLUGIN</title>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.etsuNews.js"></script>
-    <script>
+    <script type="text/javascript">
         // short hand for $(document).ready(function(){ ...
         $(function () {
+
+            var d = new Date();
+            var end = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear();
           
             // calling the plugin
             $('#news').etsuNews({
-               quantity : "3"
+               feed: "rss/news2012.xml",
+               quantity: "4",
+               displayMethod: "rss_test_0",
+               categories: "all",
+               start : "01/01/2012",
+               end : end
             });
            
         });

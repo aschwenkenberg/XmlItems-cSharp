@@ -15,6 +15,8 @@ namespace OUC
     public class LocalItems
     {
         public List<string> errors = new List<string>();
+        //public XNamespace OucNS = "http://omniupdate.com/XSL/Variables";
+        //public XNamespace yahooMediaNS = "http://search.yahoo.com/mrss/";
         public List<XElement> items = new List<XElement>();
         public bool hasItems { get { return (items.Count > 0) ? true : false; } }
 
@@ -24,10 +26,10 @@ namespace OUC
         {
             try
             {
-                var doc = XDocument.Load(HttpContext.Current.Server.MapPath(_url));    
+                var doc = XDocument.Load(HttpContext.Current.Server.MapPath(_url));
                 //var doc = XDocument.Load(_url);
                 this.items = doc.XPathSelectElements(_xpath).ToList();
-                
+
             }
             catch (XmlException exception)
             {

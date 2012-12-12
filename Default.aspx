@@ -5,10 +5,7 @@
 <html lang="en-us">
 <head runat="server">
     <title>WNL Display Methods</title>
-    <!--<link href="css/OUpage_layout_general.css" rel="Stylesheet" type="text/css" />-->
-    <script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
-    <script type="text/javascript" src='js/rss_news.js'></script>
-    
+    <script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>   
 
 </head>
 <body>
@@ -24,13 +21,11 @@
 
         <script type="text/javascript">
 
-
             var ajaxUrl = "wnl_handler.ashx";
             var quantity = 3;
             var display = "rss_sample_2";
-            var feed = "rss/news2012.xml";
+            var feed = "rss/test1000.xml";
             var xpath = "/rss/channel/item";
-            var type = "test&data";
 
             var param = { display:display, feed:feed, xpath:xpath, quantity:quantity };
 

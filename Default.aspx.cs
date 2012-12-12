@@ -11,9 +11,9 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //cont.InnerHtml = WnlDisplayMethods.newsList("http://www.gallenauniversity.com/_resources/rss/news.xml","/rss/channel/item");
-        cont.InnerHtml += "<h2> Sample 7 - 10 items</h2>"+ WnlDisplayMethods.rss_sample_7("rss/news2012.xml", "/rss/channel/item", 10);
-        cont.InnerHtml += "<h2> Sample 0 - 3 items</h2>" + WnlDisplayMethods.MasterDisplayer("rss/news2012.xml", "/rss/channel/item", 3, "rss_sample_0");
+        cont.InnerHtml += "<h2>newsList</h2>" + WnlDisplayMethods.newsList("rss/news.xml", "/rss/channel/item", 3);
+        cont.InnerHtml += "<h2> Sample 7 - 10 items</h2>"+ WnlDisplayMethods.rss_sample_7("rss/test1000.xml", "/rss/channel/item", 10);
+        cont.InnerHtml += "<h2> Sample 0 - 3 items</h2>" + WnlDisplayMethods.MasterDisplayer("rss/test1000.xml", "/rss/channel/item", 3, "rss_sample_0");
         cont.InnerHtml += "<h2> Sample 1 - 3 items</h2>" + WnlDisplayMethods.MasterDisplayer("rss/news2012.xml", "/rss/channel/item", 3, "rss_sample_1");
         cont.InnerHtml += "<h2> Sample 2 - 3 items</h2>" + WnlDisplayMethods.MasterDisplayer("rss/news2012.xml", "/rss/channel/item", 3, "rss_sample_2");
         cont.InnerHtml += "<h2> Sample 3 - 3 items</h2>" + WnlDisplayMethods.MasterDisplayer("rss/news2012.xml", "/rss/channel/item", 3, "rss_sample_3");

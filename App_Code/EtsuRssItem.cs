@@ -31,6 +31,10 @@ namespace OUC
         public string highlighted { get; set; }
         public string itemisvideo { get; set; }
 
+        public string category { get; set; }
+        public string colleges { get; set; }
+        public string tags { get; set; }
+
 
         public DateTime DateObject
         {
@@ -96,8 +100,11 @@ namespace OUC
             this.tagline = (item.Element(this.OucNS + "tagline") != null) ? item.Element(this.OucNS + "tagline").Value : "";            
             this.homefeatured = (item.Element(this.OucNS + "home-featured") != null) ? item.Element(this.OucNS + "home-featured").Value : "home-featured";
             this.highlighted = (item.Element(this.OucNS + "highlighted") != null) ? item.Element(this.OucNS + "highlighted").Value : "highlighted";
-            this.itemisvideo = (item.Element(this.OucNS + "item-is-video") != null) ? item.Element(this.OucNS + "item-is-video").Value : "item-is-video"; 
-                                            
+            this.itemisvideo = (item.Element(this.OucNS + "item-is-video") != null) ? item.Element(this.OucNS + "item-is-video").Value : "item-is-video";
+
+            this.category = (item.Element(this.OucNS + "category") != null) ? item.Element(this.OucNS + "category").Value : "category";
+            this.colleges = (item.Element(this.OucNS + "colleges") != null) ? item.Element(this.OucNS + "colleges").Value : "colleges";
+            this.tags = (item.Element(this.OucNS + "tags") != null) ? item.Element(this.OucNS + "tags").Value : "tags";                     
             //
             // TODO: Add constructor logic here
             //
