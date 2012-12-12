@@ -6,7 +6,7 @@
 
             var defaults = {
 
-                url: "wnl_handler.ashx",
+                url: "news_handler.ashx",
                 feed: "rss/news2012.xml",
                 xpath: "/rss/channel/item",
                 quantity: "4",
@@ -20,7 +20,7 @@
             // for each DOM element returned by the selector 
             return this.each(function () {
                 var o = options;
-                var params_to_send = { feed: o.feed, xpath: o.xpath, quantity: o.quantity, displayMethod: o.displayMethod };
+                var params_to_send = { feed: o.feed, xpath: o.xpath, quantity: o.quantity, displayMethod: o.displayMethod, categories: o.categories, colleges: o.colleges, tags: o.tags };
                 var obj = $(this);
 
                 $.ajax({

@@ -19,9 +19,7 @@ public partial class Default2 : System.Web.UI.Page
     {
 
 
-
-
-       using(XmlReader reader = XmlReader.Create(HttpContext.Current.Server.MapPath(ConfigurationManager.AppSettings["rss"])))
+     /*  using(XmlReader reader = XmlReader.Create(HttpContext.Current.Server.MapPath(ConfigurationManager.AppSettings["rss"])))
        {
            reader.MoveToContent();
            // read the file adding the each item to the list as XElement
@@ -44,7 +42,7 @@ public partial class Default2 : System.Web.UI.Page
            }
 
 
-       }
+       }*/
          //els.ForEach( xmlel => { EtsuRssItem ei = new EtsuRssItem(xmlel); cont.InnerHtml += ei.ToListItemWithLink(); });
     }
 }

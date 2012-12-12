@@ -24,9 +24,14 @@ using OUC;
             int numberToDisplay = 10;
             int numToDisplay = 0;
             bool isNum = int.TryParse(context.Request["quantity"], out numToDisplay);
-            string rssUri = "rss/test1000.xml";
+            string rssUri = "rss/news2012.xml";
             string rssXPath = "rss/channel/item";
-            string displayMethod = "rss_sample_7";
+            string displayMethod = "rss_test_0";
+            string categories = "medical";
+            string colleges = "all";
+            string tags = "all";
+            string start = "10/01/2012";
+            string end = "12/12/2012";
             
             string callback = "?";
 
@@ -46,6 +51,18 @@ using OUC;
             {
                 displayMethod = context.Request["displayMethod"];
             }
+            if (context.Request["categories"] != null)
+            {
+                categories = context.Request["categories"].ToLower();
+            }
+            if (context.Request["colleges"] != null)
+            {
+                colleges = context.Request["colleges"].ToLower();
+            }
+            if (context.Request["tags"] != null)
+            {
+                tags = context.Request["tags"].ToLower();
+            }
             if (context.Request["callback"] != null)
             {
                 callback = context.Request["callback"];
@@ -56,7 +73,7 @@ using OUC;
             }
            
 
-            string output = OUC.WnlDisplayMethods.MasterDisplayer(rssUri, rssXPath, numberToDisplay, displayMethod);
+            string output = OUC.WnlDisplayMethods.MasterDisplayer(rssUri, rssXPath, numberToDisplay, displayMethod, categories, colleges, tags, start, end);
             context.Response.Write(output);
 
         }
