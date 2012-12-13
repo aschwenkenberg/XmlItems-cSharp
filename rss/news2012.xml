@@ -23,6 +23,7 @@
 </media:content>
 <ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>true</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>false</ouc:item-is-video>
     <ouc:category>medical</ouc:category>
+  <ouc:tags></ouc:tags>
 </item>
 <item>
 <title>Page Title</title>
