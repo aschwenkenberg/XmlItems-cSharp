@@ -65,11 +65,11 @@ using OUC;
             }
             if (context.Request["start"] != null)
             {
-                tags = context.Request["start"];
+                start = context.Request["start"];
             }
             if (context.Request["end"] != null)
             {
-                tags = context.Request["end"];
+                end = context.Request["end"];
             }
             if (context.Request["callback"] != null)
             {
