@@ -102,9 +102,9 @@ namespace OUC
             this.highlighted = (item.Element(this.OucNS + "highlighted") != null) ? item.Element(this.OucNS + "highlighted").Value : "highlighted";
             this.itemisvideo = (item.Element(this.OucNS + "item-is-video") != null) ? item.Element(this.OucNS + "item-is-video").Value : "item-is-video";
 
-            this.category = (item.Element(this.OucNS + "category") != null) ? item.Element(this.OucNS + "category").Value : "category";
-            this.colleges = (item.Element(this.OucNS + "colleges") != null) ? item.Element(this.OucNS + "colleges").Value : "colleges";
-            this.tags = (item.Element(this.OucNS + "tags") != null) ? item.Element(this.OucNS + "tags").Value : "tags";                     
+            this.category = (item.Element(this.OucNS + "category") != null) ? item.Element(this.OucNS + "category").Value : "";
+            this.colleges = (item.Element(this.OucNS + "colleges") != null) ? item.Element(this.OucNS + "colleges").Value : "";
+            this.tags = (item.Element(this.OucNS + "tags") != null) ? item.Element(this.OucNS + "tags").Value : "";                     
             //
             // TODO: Add constructor logic here
             //
@@ -129,6 +129,23 @@ namespace OUC
 
         public string ToListSample7() { return String.Format("<p class=\"rss_hptitle\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a><br/><span class=\"newstagline\">{2}</span></p>", this.link, this.title, this.tagline); }
 
+        public bool shouldBeDisplayed()
+        {
+            if (this.title == "display")
+            {
 
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool dateIsGood(string start_date, string end_date)
+        {
+
+            return false;
+        }
     }
 }

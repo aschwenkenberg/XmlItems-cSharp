@@ -102,7 +102,7 @@
             </div>
 	           <!-- end news categories -->
 	 
-   <div id="newslisting" style="overflow:hidden;">
+   <div id="newslisting">
 	              
    </div>
             <!-- end news listings -->
