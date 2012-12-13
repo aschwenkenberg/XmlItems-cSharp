@@ -21,8 +21,8 @@ using OUC;
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             
-            int numberToDisplay = 10;
-            int numToDisplay = 0;
+            int numberToDisplay = 4;
+            int numToDisplay = 4;
             bool isNum = int.TryParse(context.Request["quantity"], out numToDisplay);
             string rssUri = "rss/news2012.xml";
             string rssXPath = "rss/channel/item";
@@ -47,7 +47,7 @@ using OUC;
             {
                 rssXPath = context.Request["xpath"];
             }
-            if (context.Request["display"] != null)
+            if (context.Request["displayMethod"] != null)
             {
                 displayMethod = context.Request["displayMethod"];
             }
@@ -65,10 +65,12 @@ using OUC;
             }
             if (context.Request["start"] != null)
             {
+                //tags = context.Request["start"];
                 start = context.Request["start"];
             }
             if (context.Request["end"] != null)
             {
+                //tags = context.Request["end"];
                 end = context.Request["end"];
             }
             if (context.Request["callback"] != null)
@@ -80,10 +82,13 @@ using OUC;
                 callback = "callback";
             }
            
+            // TODO add pagination row to filteredNews or NewsIndex method
 
             string output = OUC.WnlDisplayMethods.MasterDisplayer(rssUri, rssXPath, numberToDisplay, displayMethod, categories, colleges, tags, start, end);
             context.Response.Write(output);
 
+            
+           
         }
 
         public bool IsReusable

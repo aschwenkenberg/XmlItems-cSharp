@@ -23,6 +23,7 @@
 </media:content>
 <ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>true</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>false</ouc:item-is-video>
     <ouc:category>medical</ouc:category>
+  <ouc:tags></ouc:tags>
 </item>
 <item>
 <title>Page Title</title>
@@ -55,7 +56,7 @@
     <ouc:category>other</ouc:category>
 </item>
 <item>
-<title>page title</title>
+  <title>display</title>
 <link>http://www.etsu.edu/zz-new-directory/zztest/video_1.aspx</link>
 <description>page descriptoin</description>
 <author>page author</author>

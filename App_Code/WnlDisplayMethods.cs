@@ -92,6 +92,29 @@ namespace OUC
             return o;
         }
 
+        public static string filteredNews(string _url, string _xpath, int _qty, string _categories, string _colleges, string _tags, string _start, string _end)
+        {
+          
+
+            LocalItems xml = new LocalItems(_url, _xpath);
+
+            // get count for pagination
+
+            // start filtering ....
+          
+
+            string o = "<ul class=\"rss_hidelist\">";
+            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.shouldBeDisplayed() ) { o += currentEtsuItem.ToListSample0(); } });
+            o += "</ul>";
+            return o;
+        }
+
+
+
+
+
+
+
         public static string rss_test_0(string _url, string _xpath, int _qty, string _categories, string _colleges, string _tags, string _start, string _end)
         {
             LocalItemsCat xml = new LocalItemsCat(_url, _xpath, _categories, _colleges, _tags, _start, _end);

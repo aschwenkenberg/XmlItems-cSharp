@@ -24,7 +24,7 @@
             var ajaxUrl = "wnl_handler.ashx";
             var quantity = 3;
             var display = "rss_sample_2";
-            var feed = "rss/test1000.xml";
+            var feed = "rss/news2012.xml";
             var xpath = "/rss/channel/item";
 
             var param = { display:display, feed:feed, xpath:xpath, quantity:quantity };
