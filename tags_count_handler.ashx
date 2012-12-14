@@ -41,7 +41,7 @@ using OUC;
             
             if (context.Request["tags"] != null)
             {
-                url_tags = context.Request["tags"].ToLower();
+                url_tags = context.Request["tags"].ToLower().Trim();
             }
             string[] url_tags_array = url_tags.Split(',');
             if (context.Request["callback"] != null)
@@ -69,8 +69,8 @@ using OUC;
             {
                 
                 TagTotal t = new TagTotal();
-                t.Name = tag.ToString();
-                t.Total = eItems.Where(i => i.tags.ToLower().Contains(tag)).Count();
+                t.Name = tag.Trim().ToString();
+                t.Total = eItems.Where(i => i.tags.Trim().ToLower().Contains(tag)).Count();
 
                 result.TagTotals.Add(t);
                                 

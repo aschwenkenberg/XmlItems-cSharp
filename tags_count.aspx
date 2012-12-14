@@ -7,55 +7,23 @@
     <title>Tags</title>
 
      <script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+     <script type="text/javascript" src='js/jquery.etsuTagsCount.js'></script>
 
          <script type="text/javascript">
              // short hand for $(document).ready(function(){ ...
 
-
              $(function () {
 
-                 function tagsCount() {
-
-                     var tags = "";
-                     $('input[name="chk_tag"]').each(function (index) {
-                         if (index != 0) {
-                             tags += ",";
-                         }
-                         tags += $(this).val();
+                 function initTagsCount() {
+                     $(this).etsuTagsCount({
+                         feed: "rss/news2012.xml"
                      });
-
-
-                     $.ajax({
-                         url: "tags_count_handler.ashx",
-                         feed: "rss/news2012.xml",
-                         xpath: "/rss/channel/item",
-                         data: tags,
-                         contentType: "text/plain",
-                         success: function (data) {
-
-                             displayTagsCount(data);
-
-                         }
-                     });
+                     return false;
                  }
 
-                 tagsCount();
-
-                 function displayTagsCount(jsonResultObject) {
-
-                     obj = JSON.parse(jsonResultObject);
-
-                     for (var i = 0; i < obj.TagTotals.length; i++) {
-
-                         var name = obj.TagTotals[i].Name;
-                         $("input[name='chk_tag'][value='" + name + "']").parent().append(' (' + obj.TagTotals[i].Total + ')');
-
-                     }
-                 }
-
+                 initTagsCount();
              });
-
-             
+         
 
     </script> 
 
