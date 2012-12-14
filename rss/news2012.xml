@@ -53,7 +53,7 @@
 <media:keywords>User conference</media:keywords>
 </media:content>
 <ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>true</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>true</ouc:item-is-video>
-    <ouc:category>other</ouc:category>
+    <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
 <item>
   <title>display</title>
@@ -68,7 +68,7 @@
 <media:keywords>Video Keywords</media:keywords>
 </media:content>
 <ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>false</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>true</ouc:item-is-video>
-    <ouc:category>other</ouc:category>
+    <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
 <item>
 <title>Video</title>
@@ -83,7 +83,7 @@
 <media:keywords> </media:keywords>
 </media:content>
 <ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>false</ouc:home-featured><ouc:highlighted>true</ouc:highlighted><ouc:item-is-video>true</ouc:item-is-video>
-    <ouc:category>other</ouc:category>
+    <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
 <item>
 <title>Image</title>
@@ -98,7 +98,7 @@
 <media:keywords> </media:keywords>
 </media:content>
 <ouc:tagline>Tag Line</ouc:tagline><ouc:home-featured>true</ouc:home-featured><ouc:highlighted>false</ouc:highlighted><ouc:item-is-video>false</ouc:item-is-video>
-    <ouc:category>other</ouc:category>
+    <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
   <item>
     <title>Browser Tab Title</title>
@@ -116,7 +116,7 @@
     <ouc:home-featured>true</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>false</ouc:item-is-video>
-      <ouc:category>other</ouc:category>
+      <ouc:category>other</ouc:category><ouc:tags>academics, Arts, </ouc:tags>
   </item>
   <item>
     <title>Page Title</title>
@@ -134,7 +134,7 @@
     <ouc:home-featured>false</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>true</ouc:item-is-video>
-      <ouc:category>other</ouc:category>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
   </item>
   <item>
     <title>Page title</title>
@@ -152,7 +152,7 @@
     <ouc:home-featured>true</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>true</ouc:item-is-video>
-      <ouc:category>other</ouc:category>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
   </item>
   <item>
     <title>page title</title>
@@ -170,7 +170,7 @@
     <ouc:home-featured>false</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>true</ouc:item-is-video>
-      <ouc:category>other</ouc:category>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
   </item>
   <item>
     <title>Video</title>
@@ -188,7 +188,7 @@
     <ouc:home-featured>false</ouc:home-featured>
     <ouc:highlighted>true</ouc:highlighted>
     <ouc:item-is-video>true</ouc:item-is-video>
-      <ouc:category>other</ouc:category>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
   </item>
   <item>
     <title>Image</title>
@@ -206,7 +206,7 @@
     <ouc:home-featured>true</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>false</ouc:item-is-video>
-      <ouc:category>other</ouc:category>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
   </item>
 
 </channel>
