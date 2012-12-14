@@ -42,17 +42,17 @@
                      <li>
                         <input type="checkbox" name="chk_tag" value="athletics"/> Athletics</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="campus Recreation"/> Campus Recreation</li>
+                        <input type="checkbox" name="chk_tag" value="campus recreation"/> Campus Recreation</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="faculty &amp; Staff"/> Faculty &amp; Staff</li>
+                        <input type="checkbox" name="chk_tag" value="faculty &amp; staff"/> Faculty &amp; Staff</li>
                      <li>
                         <input type="checkbox" name="chk_tag" value="entertainment"/> Entertainment</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="policies &amp; Procedures"/> Policies &amp; Procedures</li>
+                        <input type="checkbox" name="chk_tag" value="policies &amp; procedures"/> Policies &amp; Procedures</li>
                      <li>
                         <input type="checkbox" name="chk_tag" value="students"/> Students</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="special Events"/> Special Events</li>
+                        <input type="checkbox" name="chk_tag" value="special events"/> Special Events</li>
                      <li>
                         <input type="checkbox" name="chk_tag" value="technology"/> Technology</li>
                   </ul>

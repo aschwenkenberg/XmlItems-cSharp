@@ -43,10 +43,12 @@
 
             }); // end this.each
 
-        } // end etsuNews
+        } // end etsuTagsCount
 
     }); // end fn.extend
 
+
+    //TagsCount Display Function appending count to input field
     function displayTagsCount(jsonResultObject) {
 
         obj = JSON.parse(jsonResultObject);
@@ -54,6 +56,8 @@
         for (var i = 0; i < obj.TagTotals.length; i++) {
 
             var name = obj.TagTotals[i].Name;
+            name = name.replace(/&amp;/g, '&');
+
             $("input[name='chk_tag'][value='" + name + "']").parent().append(' (' + obj.TagTotals[i].Total + ')');
 
         }

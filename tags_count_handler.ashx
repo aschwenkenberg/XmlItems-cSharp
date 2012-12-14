@@ -69,14 +69,13 @@ using OUC;
             {
                 
                 TagTotal t = new TagTotal();
-                t.Name = tag.Trim().ToString();
-                t.Total = eItems.Where(i => i.tags.Trim().ToLower().Contains(tag)).Count();
+                t.Name = tag.ToString();
+                t.Total = eItems.Where(i => i.tags.ToLower().Contains(tag)).Count();
 
                 result.TagTotals.Add(t);
                                 
             }
-
-            
+           
           
             JavaScriptSerializer serial = new JavaScriptSerializer();
             string toJson = serial.Serialize(result);
