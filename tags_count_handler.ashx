@@ -41,7 +41,7 @@ using OUC;
             
             if (context.Request["tags"] != null)
             {
-                url_tags = context.Request["tags"].ToLower();
+                url_tags = context.Request["tags"].ToLower().Trim();
             }
             string[] url_tags_array = url_tags.Split(',');
             if (context.Request["callback"] != null)
@@ -75,12 +75,11 @@ using OUC;
                 result.TagTotals.Add(t);
                                 
             }
-
-            
+           
           
             JavaScriptSerializer serial = new JavaScriptSerializer();
             string toJson = serial.Serialize(result);
-            context.Response.Write("[" + toJson + "]"); 
+            context.Response.Write( toJson ); 
            
         }
 

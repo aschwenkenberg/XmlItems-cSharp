@@ -7,41 +7,23 @@
     <title>Tags</title>
 
      <script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+     <script type="text/javascript" src='js/jquery.etsuTagsCount.js'></script>
 
          <script type="text/javascript">
              // short hand for $(document).ready(function(){ ...
 
-
              $(function () {
 
-                 function tagsCount() {
-
-                     var tags;
-                     $('input[name="chk_tag"]').each(function (index) {
-                         if (index != 0) {
-                             tags += ",";
-                         }
-                         tags += $(this).val();
+                 function initTagsCount() {
+                     $(this).etsuTagsCount({
+                         feed: "rss/news2012.xml"
                      });
-
-
-                     $.ajax({
-                         url: "tags_count_handler.ashx",
-                         feed: "rss/news2012.xml",
-                         xpath: "/rss/channel/item",
-                         data: tags,
-                         contentType: "text/plain",
-                         success: function (data) {
-
-                             
-                         }
-                     });
+                     return false;
                  }
 
-                 tagsCount();
+                 initTagsCount();
              });
-
-
+         
 
     </script> 
 
@@ -52,27 +34,27 @@
       <h3>Refine by Tags</h3>
                   <ul class="rss_hidelist">
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Academics"/> Academics</li>
+                        <input type="checkbox" name="chk_tag" value="academics"/> Academics</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Alumni"/> Alumni</li>
+                        <input type="checkbox" name="chk_tag" value="alumni"/> Alumni</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Arts, Museums, Galleries"/> Arts, Museums, Galleries</li>
+                        <input type="checkbox" name="chk_tag" value="arts, museums, galleries"/> Arts, Museums, Galleries</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Athletics"/> Athletics</li>
+                        <input type="checkbox" name="chk_tag" value="athletics"/> Athletics</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Campus Recreation"/> Campus Recreation</li>
+                        <input type="checkbox" name="chk_tag" value="campus recreation"/> Campus Recreation</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Faculty &amp; Staff"/> Faculty &amp; Staff</li>
+                        <input type="checkbox" name="chk_tag" value="faculty &amp; staff"/> Faculty &amp; Staff</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Entertainment"/> Entertainment</li>
+                        <input type="checkbox" name="chk_tag" value="entertainment"/> Entertainment</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Policies &amp; Procedures"/> Policies &amp; Procedures</li>
+                        <input type="checkbox" name="chk_tag" value="policies &amp; procedures"/> Policies &amp; Procedures</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Students"/> Students</li>
+                        <input type="checkbox" name="chk_tag" value="students"/> Students</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Special Events"/> Special Events</li>
+                        <input type="checkbox" name="chk_tag" value="special events"/> Special Events</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Technology"/> Technology</li>
+                        <input type="checkbox" name="chk_tag" value="technology"/> Technology</li>
                   </ul>
                </div>
     </form>
