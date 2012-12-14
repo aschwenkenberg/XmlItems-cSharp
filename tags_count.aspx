@@ -16,7 +16,7 @@
 
                  function tagsCount() {
 
-                     var tags;
+                     var tags = "";
                      $('input[name="chk_tag"]').each(function (index) {
                          if (index != 0) {
                              tags += ",";
@@ -33,15 +33,29 @@
                          contentType: "text/plain",
                          success: function (data) {
 
-                             
+                             displayTagsCount(data);
+
                          }
                      });
                  }
 
                  tagsCount();
+
+                 function displayTagsCount(jsonResultObject) {
+
+                     obj = JSON.parse(jsonResultObject);
+
+                     for (var i = 0; i < obj.TagTotals.length; i++) {
+
+                         var name = obj.TagTotals[i].Name;
+                         $("input[name='chk_tag'][value='" + name + "']").parent().append(' (' + obj.TagTotals[i].Total + ')');
+
+                     }
+                 }
+
              });
 
-
+             
 
     </script> 
 
@@ -52,27 +66,27 @@
       <h3>Refine by Tags</h3>
                   <ul class="rss_hidelist">
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Academics"/> Academics</li>
+                        <input type="checkbox" name="chk_tag" value="academics"/> Academics</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Alumni"/> Alumni</li>
+                        <input type="checkbox" name="chk_tag" value="alumni"/> Alumni</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Arts, Museums, Galleries"/> Arts, Museums, Galleries</li>
+                        <input type="checkbox" name="chk_tag" value="arts, museums, galleries"/> Arts, Museums, Galleries</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Athletics"/> Athletics</li>
+                        <input type="checkbox" name="chk_tag" value="athletics"/> Athletics</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Campus Recreation"/> Campus Recreation</li>
+                        <input type="checkbox" name="chk_tag" value="campus Recreation"/> Campus Recreation</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Faculty &amp; Staff"/> Faculty &amp; Staff</li>
+                        <input type="checkbox" name="chk_tag" value="faculty &amp; Staff"/> Faculty &amp; Staff</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Entertainment"/> Entertainment</li>
+                        <input type="checkbox" name="chk_tag" value="entertainment"/> Entertainment</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Policies &amp; Procedures"/> Policies &amp; Procedures</li>
+                        <input type="checkbox" name="chk_tag" value="policies &amp; Procedures"/> Policies &amp; Procedures</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Students"/> Students</li>
+                        <input type="checkbox" name="chk_tag" value="students"/> Students</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Special Events"/> Special Events</li>
+                        <input type="checkbox" name="chk_tag" value="special Events"/> Special Events</li>
                      <li>
-                        <input type="checkbox" name="chk_tag" value="Technology"/> Technology</li>
+                        <input type="checkbox" name="chk_tag" value="technology"/> Technology</li>
                   </ul>
                </div>
     </form>

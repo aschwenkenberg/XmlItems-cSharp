@@ -80,7 +80,7 @@ using OUC;
           
             JavaScriptSerializer serial = new JavaScriptSerializer();
             string toJson = serial.Serialize(result);
-            context.Response.Write("[" + toJson + "]"); 
+            context.Response.Write( toJson ); 
            
         }
 
