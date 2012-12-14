@@ -170,7 +170,7 @@
     <ouc:home-featured>false</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>true</ouc:item-is-video>
-      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni, galleries</ouc:tags>
   </item>
   <item>
     <title>Video</title>
@@ -188,7 +188,7 @@
     <ouc:home-featured>false</ouc:home-featured>
     <ouc:highlighted>true</ouc:highlighted>
     <ouc:item-is-video>true</ouc:item-is-video>
-      <ouc:category>other</ouc:category><ouc:tags>students</ouc:tags>
+      <ouc:category>other</ouc:category><ouc:tags>students, museums</ouc:tags>
   </item>
   <item>
     <title>Image</title>
@@ -206,7 +206,7 @@
     <ouc:home-featured>true</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>false</ouc:item-is-video>
-      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni, galleries</ouc:tags>
   </item>
 
 </channel>

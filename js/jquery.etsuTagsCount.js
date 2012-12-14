@@ -82,14 +82,15 @@
                     return o.Name === current_value;
                 })[0].Total;
 
-                console.log("current value : " + current_value + " , current total : " + current_total);
-
+                count += current_total;
+                
             });
 
+            $("input[name='chk_tag'][value='" + whole_value + "']").parent().append(' (' + count + ')');
 
         });
 
 
     }
 
-})($);                 // end anonymous wrapper for etsuNews jQuery plugin
+})($);                  // end anonymous wrapper for etsuNews jQuery plugin

@@ -55,6 +55,8 @@
                         <input type="checkbox" name="chk_tag" value="special events"/> Special Events</li>
                      <li>
                         <input type="checkbox" name="chk_tag" value="technology"/> Technology</li>
+                    <li>
+                        <input type="checkbox" name="chk_tag" value="student, alumni"/> Student, Alumni</li>
                   </ul>
                </div>
     </form>
