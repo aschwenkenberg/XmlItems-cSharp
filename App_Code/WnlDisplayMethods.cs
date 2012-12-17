@@ -101,15 +101,22 @@ namespace OUC
             // get count for pagination
 
             // start filtering ....
-          
+            int n = 0;
+            List<EtsuRssItem> EtsuItemList = new List<EtsuRssItem>();
 
             string o = "<ul class=\"rss_hidelist\">";
-            xml.items.ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.dateIsGood(_start, _end) && currentEtsuItem.hasCategory(_categories) && currentEtsuItem.hasAllColleges(_colleges) && currentEtsuItem.hasAllTags(_tags)) { o += currentEtsuItem.ToListSample0(); } });
+            
+            xml.items.ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.dateIsGood(_start, _end) && currentEtsuItem.hasCategory(_categories) && currentEtsuItem.hasAllColleges(_colleges) && currentEtsuItem.hasAllTags(_tags)) { EtsuItemList.Add(currentEtsuItem); } });
+            
+            while (n < _qty)
+            {
+                o += EtsuItemList[n].ToListSample0();
+                n++;
+            }           
+           // xml.items.ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.dateIsGood(_start, _end) && currentEtsuItem.hasCategory(_categories) && currentEtsuItem.hasAllColleges(_colleges) && currentEtsuItem.hasAllTags(_tags)) { o += currentEtsuItem.ToListSample0(); } });
             o += "</ul>";
             return o;
         }
-
-
 
 
 
