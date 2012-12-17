@@ -24,7 +24,7 @@
          OUC.custom_news.remember = true;
          OUC.custom_news.use_remembered_settings = true;
          OUC.custom_news.pagetype = "news";
-         OUC.custom_news.quantity = "4";
+         OUC.custom_news.quantity = "10";
          OUC.custom_news.feed = "rss/news2012.xml",
          OUC.custom_news.displayMethod =  "filteredNews",
          OUC.custom_news.categories = "";
@@ -148,6 +148,7 @@
  </div>
          <div id="rightCol">
  <!-- com.omniupdate.div label="rightcolumn" group="Everyone"  button="707" --><form>
+
                <div>
                   <h3>Search by Date</h3>
                   <p>
@@ -192,33 +193,33 @@
                   <h3>Refine by College or School</h3>
                   <ul class="rss_hidelist">
                      <li>
-                        <input type="checkbox" name="chk_college" value="Arts &amp; Sciences"/> Arts &amp; Sciences</li>
+                        <input type="checkbox" name="chk_college" value="arts &amp; sciences"/> Arts &amp; Sciences</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Business &amp; Technology"/> Business &amp; Technologu</li>
+                        <input type="checkbox" name="chk_college" value="business &amp; technology"/> Business &amp; Technologu</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Clinical &amp; Rehab. Health Sci."/> Clinical &amp; Rehab. Health Sci.</li>
+                        <input type="checkbox" name="chk_college" value="clinical &amp; rehab. health Sci."/> Clinical &amp; Rehab. Health Sci.</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Education"/> Education</li>
+                        <input type="checkbox" name="chk_college" value="education"/> Education</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Honors"/> Honors</li>
+                        <input type="checkbox" name="chk_college" value="honors"/> Honors</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Medicine"/> Medicine</li>
+                        <input type="checkbox" name="chk_college" value="medicine"/> Medicine</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Nursing"/> Nursing</li>
+                        <input type="checkbox" name="chk_college" value="nursing"/> Nursing</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Pharmacy"/> Pharmacy</li>
+                        <input type="checkbox" name="chk_college" value="pharmacy"/> Pharmacy</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Public Health"/> Public Health</li>
+                        <input type="checkbox" name="chk_college" value="public health"/> Public Health</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Continuing Studies"/> Continuing Studies</li>
+                        <input type="checkbox" name="chk_college" value="continuing studies"/> Continuing Studies</li>
                      <li>
-                        <input type="checkbox" name="chk_college" value="Graduate Studies"/> Graduate Studies</li>
+                        <input type="checkbox" name="chk_college" value="graduate studies"/> Graduate Studies</li>
                   </ul>
                </div>
             </form>
             <!-- /com.omniupdate.div -->
  </div>
-      </div>
+     
     </form>
 </body>
 </html>

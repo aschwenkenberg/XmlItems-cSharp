@@ -129,6 +129,85 @@ namespace OUC
 
         public string ToListSample7() { return String.Format("<p class=\"rss_hptitle\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a><br/><span class=\"newstagline\">{2}</span></p>", this.link, this.title, this.tagline); }
 
+        public bool hasCategory(string _categories)
+        {
+            if (string.IsNullOrEmpty(_categories))
+            {
+                return true;
+            }
+            else
+            {
+                if (this.category == _categories)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool hasAllTags(string _tags)
+        {
+            if (string.IsNullOrEmpty(_tags))
+            {
+                return true;
+            }
+            else
+            {
+                string[] tags_array = _tags.Split(',');
+                bool exist = true;
+
+                foreach (string tag in tags_array)
+                {
+                    if (!this.tags.Contains(tag))
+                    {
+                        exist = false;
+                    }
+                   
+                }
+                if (exist)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool hasAllColleges(string _colleges)
+        {
+            if (string.IsNullOrEmpty(_colleges))
+            {
+                return true;
+            }
+            else
+            {
+                string[] colleges_array = _colleges.Split(',');
+                bool exist = true;
+
+                foreach (string college in colleges_array)
+                {
+                    if (!this.colleges.Contains(college))
+                    {
+                        exist = false;
+                    }
+
+                }
+                if (exist)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
         public bool shouldBeDisplayed()
         {
             if (this.title == "display")
@@ -144,8 +223,55 @@ namespace OUC
 
         public bool dateIsGood(string start_date, string end_date)
         {
+            DateTime _pubDate = DateTime.Parse(this.pubDate);
 
-            return false;
+            if (!string.IsNullOrEmpty(start_date) && !string.IsNullOrEmpty(end_date))
+            {
+                DateTime _start_date = DateTime.Parse(start_date);
+                DateTime _end_date = DateTime.Parse(end_date);
+                if ((_start_date < _pubDate) && (_end_date > _pubDate))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (string.IsNullOrEmpty(start_date) && !string.IsNullOrEmpty(end_date))
+            {               
+                DateTime _end_date = DateTime.Parse(end_date);
+                if (_end_date > _pubDate)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+             else if (!string.IsNullOrEmpty(start_date) && string.IsNullOrEmpty(end_date)){
+                
+                DateTime _start_date = DateTime.Parse(start_date);
+                if (_start_date < _pubDate)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (string.IsNullOrEmpty(start_date) && string.IsNullOrEmpty(end_date))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+                     
+           
         }
     }
 }

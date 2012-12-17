@@ -10,7 +10,7 @@
 <generator>OmniUpdate (OU Publish)</generator>
 
 <item>
-<title>Browser Tab Title</title>
+<title>Browser Tab Title 1</title>
 <link>http://www.etsu.edu/zz-new-directory/zztest/image_1.aspx</link>
 <description>page description</description>
 <author>page author</author>
@@ -26,7 +26,7 @@
   <ouc:tags></ouc:tags>
 </item>
 <item>
-<title>Page Title</title>
+<title>Page Title 2</title>
 <link>http://www.etsu.edu/zz-new-directory/zztest/video_2.aspx</link>
 <description>page description</description>
 <author>page author</author>
@@ -41,7 +41,7 @@
     <ouc:category>headlines</ouc:category>
 </item>
 <item>
-<title>Page title</title>
+<title>Page title 3</title>
 <link>http://www.etsu.edu/zz-new-directory/zztest/video_3.aspx</link>
 <description>page description</description>
 <author>page author</author>
@@ -56,7 +56,7 @@
     <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
 <item>
-  <title>display</title>
+  <title>display 4</title>
 <link>http://www.etsu.edu/zz-new-directory/zztest/video_1.aspx</link>
 <description>page descriptoin</description>
 <author>page author</author>
@@ -71,7 +71,7 @@
     <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
 <item>
-<title>Video</title>
+<title>Video 5</title>
 <link>http://www.etsu.edu/zz-new-directory/zztest/video.aspx</link>
 <description>test</description>
 <author>ETSU</author>
@@ -86,7 +86,7 @@
     <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
 <item>
-<title>Image</title>
+<title>Image 6</title>
 <link>http://www.etsu.edu/zz-new-directory/zztest/image.aspx</link>
 <description>Image</description>
 <author>ETSU</author>
@@ -101,7 +101,7 @@
     <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
 </item>
   <item>
-    <title>Browser Tab Title</title>
+    <title>Browser Tab Title 7</title>
     <link>http://www.etsu.edu/zz-new-directory/zztest/image_1.aspx</link>
     <description>page description</description>
     <author>page author</author>
@@ -116,10 +116,10 @@
     <ouc:home-featured>true</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>false</ouc:item-is-video>
-      <ouc:category>other</ouc:category><ouc:tags>academics, Arts, </ouc:tags>
+      <ouc:category>other</ouc:category><ouc:tags>students</ouc:tags>
   </item>
   <item>
-    <title>Page Title</title>
+    <title>Page Title 8</title>
     <link>http://www.etsu.edu/zz-new-directory/zztest/video_2.aspx</link>
     <description>page description</description>
     <author>page author</author>
@@ -137,7 +137,7 @@
       <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
   </item>
   <item>
-    <title>Page title</title>
+    <title>Page title 9</title>
     <link>http://www.etsu.edu/zz-new-directory/zztest/video_3.aspx</link>
     <description>page description</description>
     <author>page author</author>
@@ -155,7 +155,7 @@
       <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni</ouc:tags>
   </item>
   <item>
-    <title>page title</title>
+    <title>page title 10</title>
     <link>http://www.etsu.edu/zz-new-directory/zztest/video_1.aspx</link>
     <description>page descriptoin</description>
     <author>page author</author>
@@ -171,9 +171,10 @@
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>true</ouc:item-is-video>
       <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni, galleries</ouc:tags>
+      <ouc:colleges>medicine, nursing</ouc:colleges>
   </item>
   <item>
-    <title>Video</title>
+    <title>Video 11</title>
     <link>http://www.etsu.edu/zz-new-directory/zztest/video.aspx</link>
     <description>test</description>
     <author>ETSU</author>
@@ -191,7 +192,7 @@
       <ouc:category>other</ouc:category><ouc:tags>students, museums</ouc:tags>
   </item>
   <item>
-    <title>Image</title>
+    <title>Image 12</title>
     <link>http://www.etsu.edu/zz-new-directory/zztest/image.aspx</link>
     <description>Image</description>
     <author>ETSU</author>
@@ -206,7 +207,7 @@
     <ouc:home-featured>true</ouc:home-featured>
     <ouc:highlighted>false</ouc:highlighted>
     <ouc:item-is-video>false</ouc:item-is-video>
-      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni, galleries</ouc:tags>
+      <ouc:category>other</ouc:category><ouc:tags>academics, arts, alumni, galleries, students</ouc:tags>
   </item>
 
 </channel>

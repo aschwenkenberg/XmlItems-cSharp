@@ -104,12 +104,10 @@ namespace OUC
           
 
             string o = "<ul class=\"rss_hidelist\">";
-            xml.items.Take(_qty).ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.shouldBeDisplayed() ) { o += currentEtsuItem.ToListSample0(); } });
+            xml.items.ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.dateIsGood(_start, _end) && currentEtsuItem.hasCategory(_categories) && currentEtsuItem.hasAllColleges(_colleges) && currentEtsuItem.hasAllTags(_tags)) { o += currentEtsuItem.ToListSample0(); } });
             o += "</ul>";
             return o;
         }
-
-
 
 
 
