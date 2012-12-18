@@ -129,9 +129,11 @@ namespace OUC
 
         public string ToListSample7() { return String.Format("<p class=\"rss_hptitle\"><a class=\"rss_hyperlink\" href=\"{0}\">{1}</a><br/><span class=\"newstagline\">{2}</span></p>", this.link, this.title, this.tagline); }
 
+        public string ToDefault() { return String.Format("<li class=\"rss_listitems\"><span class=\"rss_imgspan\"><img src=\"{0}\"/></span><span class=\"rss_titlespan\"><a class=\"rss_hyperlink\" href=\"{1}\">{2}</a></span><span class=\"rss_datespan\">{5} <em>({3}) </em></span><span class=\"rss_shortdescript\"> {4}  <a class=\"rss_readmore\" href=\"{1}\">Read more...</a></span></li><span class=\"taglist\">Tags: <span class=\"tagwords\">{6}</span></span>", this.mthumb, this.link, this.title, this.monthyear, this.description, this.location, this.tags); }
+
         public bool hasCategory(string _categories)
         {
-            if (string.IsNullOrEmpty(_categories))
+            if (string.IsNullOrEmpty(_categories) || (_categories.Equals("all")) || (_categories == "")) 
             {
                 return true;
             }

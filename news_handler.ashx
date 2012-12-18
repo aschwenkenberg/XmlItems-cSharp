@@ -21,15 +21,15 @@ using OUC;
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             
-            int numberToDisplay = 4;
-            int numToDisplay = 4;
+            int numberToDisplay = 10;
+            int numToDisplay = 10;
             bool isNum = int.TryParse(context.Request["quantity"], out numToDisplay);
             string rssUri = "rss/news2012.xml";
             string rssXPath = "rss/channel/item";
-            string displayMethod = "rss_test_0";
-            string categories = "medical";
-            string colleges = "all";
-            string tags = "all";
+            string displayMethod = "filteredNews";
+            string categories = "";
+            string colleges = "";
+            string tags = "";
             string start = "01/01/2012";
             string end = "12/12/2012";
             

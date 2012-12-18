@@ -101,33 +101,32 @@ namespace OUC
             // get count for pagination
 
             // start filtering ....
-            int n = 0;
+            
             List<EtsuRssItem> EtsuItemList = new List<EtsuRssItem>();
 
             string o = "<ul class=\"rss_hidelist\">";
             
             xml.items.ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.dateIsGood(_start, _end) && currentEtsuItem.hasCategory(_categories) && currentEtsuItem.hasAllColleges(_colleges) && currentEtsuItem.hasAllTags(_tags)) { EtsuItemList.Add(currentEtsuItem); } });
-            
-            while (n < _qty)
-            {
-                o += EtsuItemList[n].ToListSample0();
-                n++;
-            }           
-           // xml.items.ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.dateIsGood(_start, _end) && currentEtsuItem.hasCategory(_categories) && currentEtsuItem.hasAllColleges(_colleges) && currentEtsuItem.hasAllTags(_tags)) { o += currentEtsuItem.ToListSample0(); } });
+
+            EtsuItemList.Take(_qty).ToList().ForEach(
+                x =>
+                {
+                    o += x.ToDefault();
+                });
             o += "</ul>";
             return o;
         }
 
 
 
-        public static string rss_test_0(string _url, string _xpath, int _qty, string _categories, string _colleges, string _tags, string _start, string _end)
+       /* public static string rss_test_0(string _url, string _xpath, int _qty, string _categories, string _colleges, string _tags, string _start, string _end)
         {
             LocalItemsCat xml = new LocalItemsCat(_url, _xpath, _categories, _colleges, _tags, _start, _end);
             string o = "<ul class=\"rss_hidelist\">";
             xml.items.Take(_qty).ToList().ForEach(x => { o += x.ToEtsuRssItem().ToListSample0(); });
             o += "</ul>";
             return o;
-        }
+        }*/
        
         public static string eventsList(string _url,string _xpath)
         {
