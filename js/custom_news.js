@@ -7,8 +7,9 @@
         categories: OUC.custom_news.categories,
         colleges: OUC.custom_news.colleges,
         tags: OUC.custom_news.tags,
-        start: OUC.custom_news.start,
-        end: OUC.custom_news.end
+        fromDate: OUC.custom_news.fromDate,
+        toDate: OUC.custom_news.toDate,
+        pageStart: OUC.custom_news.pageStart
     });
     return false;
 }
@@ -30,16 +31,16 @@ $(".custom_news_category_link").click(function (e) {
 
 $('#from').bind('change', function (e) {
     var val = $(this).val();
-    OUC.custom_news.start = "";
-    OUC.custom_news.start = val;
+    OUC.custom_news.fromDate = "";
+    OUC.custom_news.fromDate = val;
     initNews();
     return false;
 });
 
 $('#to').bind('change', function (e) {
     var val = $(this).val();
-    OUC.custom_news.end = "";
-    OUC.custom_news.end = val;
+    OUC.custom_news.toDate = "";
+    OUC.custom_news.toDate = val;
     initNews();
     return false;
 });

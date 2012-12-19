@@ -23,7 +23,7 @@
             // for each DOM element returned by the selector 
             return this.each(function () {
                 var o = options;
-                var params_to_send = { feed: o.feed, xpath: o.xpath, quantity: o.quantity, displayMethod: o.displayMethod, categories: o.categories, colleges: o.colleges, tags: o.tags, start: o.start, end: o.end };
+                var params_to_send = { feed: o.feed, xpath: o.xpath, quantity: o.quantity, displayMethod: o.displayMethod, categories: o.categories, colleges: o.colleges, tags: o.tags, fromDate: o.fromDate, toDate: o.toDate, pageStart: o.pageStart };
                 var obj = $(this);
 
                 $.ajax({

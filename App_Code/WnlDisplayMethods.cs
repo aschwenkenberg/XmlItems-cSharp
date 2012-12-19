@@ -92,7 +92,7 @@ namespace OUC
             return o;
         }
 
-        public static string filteredNews(string _url, string _xpath, int _qty, string _categories, string _colleges, string _tags, string _start, string _end)
+        public static string filteredNews(string _url, string _xpath, int _qty, string _categories, string _colleges, string _tags, string _fromDate, string _toDate, int _pageStart)
         {
           
 
@@ -105,8 +105,17 @@ namespace OUC
             List<EtsuRssItem> EtsuItemList = new List<EtsuRssItem>();
 
             string o = "<ul class=\"rss_hidelist\">";
-            
-            xml.items.ToList().ForEach(x => { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); if (currentEtsuItem.dateIsGood(_start, _end) && currentEtsuItem.hasCategory(_categories) && currentEtsuItem.hasAllColleges(_colleges) && currentEtsuItem.hasAllTags(_tags)) { EtsuItemList.Add(currentEtsuItem); } });
+
+            xml.items.ToList().ForEach(
+                x => 
+                    { EtsuRssItem currentEtsuItem = x.ToEtsuRssItem(); 
+                        if (currentEtsuItem.dateIsGood(_fromDate, _toDate) && 
+                            currentEtsuItem.hasCategory(_categories) && 
+                            currentEtsuItem.hasAllColleges(_colleges) && 
+                            currentEtsuItem.hasAllTags(_tags)) 
+                        { EtsuItemList.Add(currentEtsuItem); } 
+                    }
+             );
 
             EtsuItemList.Take(_qty).ToList().ForEach(
                 x =>
@@ -154,7 +163,7 @@ namespace OUC
 
         }
 
-        public static string MasterDisplayer(string _url, string _xpath, int _qty, string _displayMethodName, string _categories, string _colleges, string _tags, string _start, string _end)
+        public static string MasterDisplayer(string _url, string _xpath, int _qty, string _displayMethodName, string _categories, string _colleges, string _tags, string _fromDate, string _toDate, int _pageStart)
         {
             string output = "";
 
@@ -162,7 +171,7 @@ namespace OUC
 
             if (mi != null)
             {
-                output += mi.Invoke(new object { }, new object[] { _url, _xpath, _qty, _categories, _colleges, _tags, _start, _end });
+                output += mi.Invoke(new object { }, new object[] { _url, _xpath, _qty, _categories, _colleges, _tags, _fromDate, _toDate, _pageStart });
             }
             else
             {

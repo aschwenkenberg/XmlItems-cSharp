@@ -1,0 +1,11 @@
+﻿<option value="arts &amp; sciences">Arts & Sciences</option>
+<option value="business &amp; Technology">Business & Technology</option>
+<option value="Clinical &amp; rehab. health Sci.">Clinical & Rehab. Health Sci.</option>
+<option value="education">Education</option>
+<option value="honors">Honors</option>
+<option value="medicine">Medicine</option>
+<option value="nursing">Nursing</option>
+<option value="pharmacy">Pharmacy</option>
+<option value="public health">Public Health</option>
+<option value="continuing studies">Continuing Studies</option>
+<option value="graduate studies">Graduate Studies</option>

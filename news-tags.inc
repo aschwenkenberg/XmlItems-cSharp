@@ -1,0 +1,13 @@
+﻿<option value="academics">Academics</option>
+<option value="alumni">Alumni</option>
+<option value="arts">Arts</option>
+<option value="museums">Museums</option>
+<option value="galleries">Galleries</option>
+<option value="athletics">Athletics</option>
+<option value="campus recreation">Campus Recreation</option>
+<option value="fac_staff">Faculty & Staff</option>
+<option value="entertainment">Entertainment</option>
+<option value="policies & procedures">Policies & Procedures</option>
+<option value="students">Students</option>
+<option value="special events">Special Events</option>
+<option value="technology">Technology</option>

@@ -23,6 +23,7 @@ using OUC;
             
             int numberToDisplay = 10;
             int numToDisplay = 10;
+            int pageStart = 1;
             bool isNum = int.TryParse(context.Request["quantity"], out numToDisplay);
             string rssUri = "rss/news2012.xml";
             string rssXPath = "rss/channel/item";
@@ -30,8 +31,8 @@ using OUC;
             string categories = "";
             string colleges = "";
             string tags = "";
-            string start = "01/01/2012";
-            string end = "12/12/2012";
+            string fromDate = "01/01/2012";
+            string toDate = "12/12/2012";
             
             string callback = "?";
 
@@ -63,15 +64,15 @@ using OUC;
             {
                 tags = context.Request["tags"].ToLower();
             }
-            if (context.Request["start"] != null)
+            if (context.Request["fromDate"] != null)
             {
                 //tags = context.Request["start"];
-                start = context.Request["start"];
+                fromDate = context.Request["fromDate"];
             }
-            if (context.Request["end"] != null)
+            if (context.Request["toDate"] != null)
             {
                 //tags = context.Request["end"];
-                end = context.Request["end"];
+                toDate = context.Request["toDate"];
             }
             if (context.Request["callback"] != null)
             {
@@ -84,7 +85,7 @@ using OUC;
            
             // TODO add pagination row to filteredNews or NewsIndex method
 
-            string output = OUC.WnlDisplayMethods.MasterDisplayer(rssUri, rssXPath, numberToDisplay, displayMethod, categories, colleges, tags, start, end);
+            string output = OUC.WnlDisplayMethods.MasterDisplayer(rssUri, rssXPath, numberToDisplay, displayMethod, categories, colleges, tags, fromDate, toDate, pageStart);
             context.Response.Write(output);
 
             

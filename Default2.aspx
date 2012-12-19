@@ -32,8 +32,9 @@
          OUC.custom_news.tags = "";
          OUC.custom_news.remember_tags = "";
          OUC.custom_news.year = "";
-         OUC.custom_news.start = "";
-         OUC.custom_news.end = "";
+         OUC.custom_news.fromDate = "";
+         OUC.custom_news.toDate = "";
+         OUC.custom_news.pageStart = 1;
 		
 	</script>
 	  
@@ -68,8 +69,6 @@
 
 	              initTagsCount();
 	          
-	
-
 
 	          // calling the plugin
 	          initNews();
@@ -82,11 +81,7 @@
 
     <script type="text/javascript">
         // short hand for $(document).ready(function(){ ...
-        $(function () {
-        
-           //var d = new Date();
-           //var end = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear();
-          
+        $(function () {        
                       
         });
     </script>
